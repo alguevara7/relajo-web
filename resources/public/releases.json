@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html><head><title>Ring: Stacktrace</title><style type="text/css">/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.6.0
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}
+
+body {
+    font-family: sans-serif;
+    background: #a00;
+    padding: 1em;
+}
+
+#exception {
+    background: #f2f2f2;
+    color: #333;
+    padding: 1em;
+}
+
+h1 {
+    color: #800;
+    font-size: 32pt;
+    text-align: center;
+    margin-bottom: 0.3em;
+}
+
+.message {
+    font-size: 16pt;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#causes h2 {
+    font-size: 22pt;
+    text-align: center;
+    margin-bottom: 0.3em;
+}
+
+#causes h2 .class {
+    color: #800;
+}
+
+#causes .message {
+    font-size: 14pt;
+}
+
+.trace {
+    width: 90%;
+    margin: auto;
+}
+
+.trace table {
+    width: 100%;
+    font-size: 12pt;
+    background: #dadada;
+    border: 0.8em solid #dadada;
+    margin-bottom: 1.5em;
+}
+
+.trace table tr.clojure {
+    color: #222;
+}
+
+.trace table tr.java {
+    color: #6a6a6a;
+}
+
+.trace td {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+.trace td.method {
+    padding-left: 1em;
+    padding-right: 0.2em;
+    text-aligh: left;
+}
+
+.trace td.source {
+    padding-left: 0.2em;
+    text-align: right;
+}
+
+.trace .views {
+    width: 100%;
+    background: #bcbcbc;
+    padding: 0.5em 0;
+}
+
+.views .label, .views ul, .views li {
+    display: inline-block;
+}
+
+.trace .views .label {
+    padding: 0 1em;
+}
+
+.trace .views li {
+    padding: 0 2em;
+    cursor: pointer;
+}
+</style></head><body><div id="exception"><h1>java.lang.Exception</h1><div class="message">Don't know how to write JSON of class java.sql.Timestamp</div><div class="trace"><table><tbody><tr class="clojure"><td class="source">json.clj:354</td><td class="method">clojure.data.json/write-generic</td></tr><tr class="clojure"><td class="source">json.clj:279</td><td class="method">clojure.data.json/eval4321[fn]</td></tr><tr class="clojure"><td class="source">json.clj:320</td><td class="method">clojure.data.json/write-object</td></tr><tr class="clojure"><td class="source">json.clj:279</td><td class="method">clojure.data.json/eval4321[fn]</td></tr><tr class="clojure"><td class="source">json.clj:333</td><td class="method">clojure.data.json/write-array</td></tr><tr class="clojure"><td class="source">json.clj:279</td><td class="method">clojure.data.json/eval4321[fn]</td></tr><tr class="clojure"><td class="source">json.clj:320</td><td class="method">clojure.data.json/write-object</td></tr><tr class="clojure"><td class="source">json.clj:279</td><td class="method">clojure.data.json/eval4321[fn]</td></tr><tr class="clojure"><td class="source">json.clj:333</td><td class="method">clojure.data.json/write-array</td></tr><tr class="clojure"><td class="source">json.clj:279</td><td class="method">clojure.data.json/eval4321[fn]</td></tr><tr class="clojure"><td class="source">json.clj:428</td><td class="method">clojure.data.json/write</td></tr><tr class="java"><td class="source">RestFn.java:425</td><td class="method">clojure.lang.RestFn.invoke</td></tr><tr class="java"><td class="source">AFn.java:156</td><td class="method">clojure.lang.AFn.applyToHelper</td></tr><tr class="java"><td class="source">RestFn.java:132</td><td class="method">clojure.lang.RestFn.applyTo</td></tr><tr class="clojure"><td class="source">core.clj:628</td><td class="method">clojure.core/apply</td></tr><tr class="clojure"><td class="source">json.clj:435</td><td class="method">clojure.data.json/write-str</td></tr><tr class="java"><td class="source">RestFn.java:410</td><td class="method">clojure.lang.RestFn.invoke</td></tr><tr class="clojure"><td class="source">representation.clj:134</td><td class="method">liberator.representation/eval5193[fn]</td></tr><tr class="java"><td class="source">MultiFn.java:231</td><td class="method">clojure.lang.MultiFn.invoke</td></tr><tr class="clojure"><td class="source">representation.clj:206</td><td class="method">liberator.representation/eval5280[fn]</td></tr><tr class="clojure"><td class="source">representation.clj:23</td><td class="method">liberator.representation/eval5012[fn]</td></tr><tr class="clojure"><td class="source">core.clj:191</td><td class="method">liberator.core/run-handler</td></tr><tr class="clojure"><td class="source">core.clj:244</td><td class="method">liberator.core/handle-ok</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:250</td><td class="method">liberator.core/multiple-representations?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:317</td><td class="method">liberator.core/put-to-existing?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:320</td><td class="method">liberator.core/post-to-existing?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:329</td><td class="method">liberator.core/method-patch?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:332</td><td class="method">liberator.core/method-delete?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:352</td><td class="method">liberator.core/if-modified-since-exists?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:369</td><td class="method">liberator.core/if-none-match-exists?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:389</td><td class="method">liberator.core/if-unmodified-since-exists?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:403</td><td class="method">liberator.core/if-match-exists?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:406</td><td class="method">liberator.core/exists?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:409</td><td class="method">liberator.core/processable?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:428</td><td class="method">liberator.core/accept-encoding-exists?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:441</td><td class="method">liberator.core/accept-charset-exists?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:455</td><td class="method">liberator.core/accept-language-exists?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:465</td><td class="method">liberator.core/media-type-available?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:468</td><td class="method">liberator.core/accept-exists?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:485</td><td class="method">liberator.core/is-options?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:488</td><td class="method">liberator.core/valid-entity-length?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:491</td><td class="method">liberator.core/known-content-type?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:493</td><td class="method">liberator.core/valid-content-header?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:496</td><td class="method">liberator.core/allowed?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:499</td><td class="method">liberator.core/authorized?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:502</td><td class="method">liberator.core/malformed?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:505</td><td class="method">liberator.core/method-allowed?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:508</td><td class="method">liberator.core/uri-too-long?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:511</td><td class="method">liberator.core/known-method?</td></tr><tr class="clojure"><td class="source">core.clj:103</td><td class="method">liberator.core/decide</td></tr><tr class="clojure"><td class="source">core.clj:514</td><td class="method">liberator.core/service-available?</td></tr><tr class="clojure"><td class="source">core.clj:601</td><td class="method">liberator.core/run-resource</td></tr><tr class="clojure"><td class="source">resources.clj:9</td><td class="method">conorden.resources/get-releases[fn]</td></tr><tr class="clojure"><td class="source">response.clj:34</td><td class="method">compojure.response/eval1968[fn]</td></tr><tr class="clojure"><td class="source">response.clj:7</td><td class="method">compojure.response/eval1927[fn]</td></tr><tr class="clojure"><td class="source">core.clj:104</td><td class="method">compojure.core/make-route[fn]</td></tr><tr class="clojure"><td class="source">core.clj:94</td><td class="method">compojure.core/wrap-route-middleware[fn]</td></tr><tr class="clojure"><td class="source">core.clj:41</td><td class="method">compojure.core/if-route[fn]</td></tr><tr class="clojure"><td class="source">core.clj:27</td><td class="method">compojure.core/if-method[fn]</td></tr><tr class="clojure"><td class="source">core.clj:118</td><td class="method">compojure.core/routing[fn]</td></tr><tr class="clojure"><td class="source">core.clj:2515</td><td class="method">clojure.core/some</td></tr><tr class="clojure"><td class="source">core.clj:118</td><td class="method">compojure.core/routing</td></tr><tr class="java"><td class="source">RestFn.java:139</td><td class="method">clojure.lang.RestFn.applyTo</td></tr><tr class="clojure"><td class="source">core.clj:626</td><td class="method">clojure.core/apply</td></tr><tr class="clojure"><td class="source">core.clj:123</td><td class="method">compojure.core/routes[fn]</td></tr><tr class="clojure"><td class="source">core.clj:118</td><td class="method">compojure.core/routing[fn]</td></tr><tr class="clojure"><td class="source">core.clj:2515</td><td class="method">clojure.core/some</td></tr><tr class="clojure"><td class="source">core.clj:118</td><td class="method">compojure.core/routing</td></tr><tr class="java"><td class="source">RestFn.java:139</td><td class="method">clojure.lang.RestFn.applyTo</td></tr><tr class="clojure"><td class="source">core.clj:626</td><td class="method">clojure.core/apply</td></tr><tr class="clojure"><td class="source">core.clj:123</td><td class="method">compojure.core/routes[fn]</td></tr><tr class="clojure"><td class="source">params.clj:64</td><td class="method">ring.middleware.params/wrap-params[fn]</td></tr><tr class="clojure"><td class="source">cors.clj:150</td><td class="method">ring.middleware.cors/wrap-cors[fn]</td></tr><tr class="java"><td class="source">Var.java:379</td><td class="method">clojure.lang.Var.invoke</td></tr><tr class="clojure"><td class="source">stacktrace.clj:23</td><td class="method">ring.middleware.stacktrace/wrap-stacktrace-log[fn]</td></tr><tr class="clojure"><td class="source">stacktrace.clj:86</td><td class="method">ring.middleware.stacktrace/wrap-stacktrace-web[fn]</td></tr><tr class="clojure"><td class="source">jetty.clj:18</td><td class="method">ring.adapter.jetty/proxy-handler[fn]</td></tr><tr class="java"><td class="source">(Unknown Source)</td><td class="method">ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle</td></tr><tr class="java"><td class="source">HandlerWrapper.java:116</td><td class="method">org.eclipse.jetty.server.handler.HandlerWrapper.handle</td></tr><tr class="java"><td class="source">Server.java:363</td><td class="method">org.eclipse.jetty.server.Server.handle</td></tr><tr class="java"><td class="source">AbstractHttpConnection.java:483</td><td class="method">org.eclipse.jetty.server.AbstractHttpConnection.handleRequest</td></tr><tr class="java"><td class="source">AbstractHttpConnection.java:920</td><td class="method">org.eclipse.jetty.server.AbstractHttpConnection.headerComplete</td></tr><tr class="java"><td class="source">AbstractHttpConnection.java:982</td><td class="method">org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete</td></tr><tr class="java"><td class="source">HttpParser.java:635</td><td class="method">org.eclipse.jetty.http.HttpParser.parseNext</td></tr><tr class="java"><td class="source">HttpParser.java:235</td><td class="method">org.eclipse.jetty.http.HttpParser.parseAvailable</td></tr><tr class="java"><td class="source">AsyncHttpConnection.java:82</td><td class="method">org.eclipse.jetty.server.AsyncHttpConnection.handle</td></tr><tr class="java"><td class="source">SelectChannelEndPoint.java:628</td><td class="method">org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle</td></tr><tr class="java"><td class="source">SelectChannelEndPoint.java:52</td><td class="method">org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run</td></tr><tr class="java"><td class="source">QueuedThreadPool.java:608</td><td class="method">org.eclipse.jetty.util.thread.QueuedThreadPool.runJob</td></tr><tr class="java"><td class="source">QueuedThreadPool.java:543</td><td class="method">org.eclipse.jetty.util.thread.QueuedThreadPool$3.run</td></tr><tr class="java"><td class="source">Thread.java:745</td><td class="method">java.lang.Thread.run</td></tr></tbody></table></div></div></body></html>
