@@ -80,18 +80,6 @@
 
 (defn all [] releases-atom)
 
-(swap! releases-atom
-       #(update-in %
-                   [0 :version]
-                   (constantly "HHHHHHHHHHHHHHHHHHH")))
-
-(swap! releases-atom
-       (fn [v]
-         (update-in v [0 :version] (constantly "sf"))))
-
-(update-in [1 2 {:a 1}] [2 :a]
-           (constantly 100))
-
 (defn fetch []
   (reset! releases-atom (sort-by :version > releases)))
 

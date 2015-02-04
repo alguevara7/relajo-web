@@ -34,8 +34,7 @@
       [:span.label.label-default author]]]]
    [:div.media-body
     [commit-state state kca]
-    [:span {:onMouseOver #(js/alert sha)} (norm-message message kca)]
-    ]])
+    (norm-message message kca)]])
 
 (defn release-state->label-class [{:keys [state commits]}]
   (cond
